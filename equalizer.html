@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Equalizer - ND Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: #121212;
+      color: white;
+    }
+    header {
+      background: #1a1a1a;
+      padding: 1rem;
+      text-align: center;
+    }
+    header img {
+      height: 40px;
+    }
+    main {
+      padding: 2rem;
+      text-align: center;
+    }
+    .tool-box {
+      background: #1f1f1f;
+      padding: 2rem;
+      border-radius: 15px;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+    .tool-box h2 {
+      margin-bottom: 1rem;
+    }
+    .upload-area {
+      margin: 1.5rem 0;
+    }
+    input[type="file"] {
+      background: #333;
+      color: white;
+      padding: 0.5rem;
+      border: none;
+      border-radius: 8px;
+    }
+    select {
+      margin-top: 1rem;
+      padding: 0.5rem;
+      background: #222;
+      color: white;
+      border: 1px solid #444;
+      border-radius: 8px;
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+    button:hover {
+      background-color: #1c7430;
+    }
+    .note {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="ND Studio Logo" />
+  </header>
+  <main>
+    <div class="tool-box">
+      <h2>Audio Equalizer (AI)</h2>
+      <div class="upload-area">
+        <input type="file" accept="audio/*" />
+      </div>
+      <select>
+        <option value="">Select Equalizer Mode</option>
+        <option value="bass">Bass Boost</option>
+        <option value="treble">Treble Boost</option>
+        <option value="vocal">Vocal Enhance</option>
+        <option value="flat">Flat</option>
+      </select>
+      <br>
+      <button onclick="applyEqualizer()">Apply Equalizer</button>
+      <p class="note">AI-powered audio equalization coming soon. Placeholder only.</p>
+    </div>
+  </main>
+
+  <script>
+    function applyEqualizer() {
+      alert("Equalizer processing will be added here soon.");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Audio to Video - ND Studio</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0f0f0f;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    h1 {
+      color: #00ffcc;
+    }
+    input, button {
+      margin: 10px;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+    }
+    button {
+      background-color: #00ffcc;
+      color: #000;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #00e6b8;
+    }
+    video {
+      margin-top: 20px;
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎵 Add Audio to Video</h1>
+  <input type="file" id="videoInput" accept="video/*">
+  <input type="file" id="audioInput" accept="audio/*">
+  <button onclick="mergeAudioVideo()">Add Audio</button>
+  <video id="outputVideo" controls></video>
+
+  <script>
+    function mergeAudioVideo() {
+      const videoFile = document.getElementById('videoInput').files[0];
+      const audioFile = document.getElementById('audioInput').files[0];
+
+      if (!videoFile || !audioFile) {
+        alert('Please select both video and audio files.');
+        return;
+      }
+
+      alert("Merging audio and video requires a backend or external tool like FFmpeg.js");
+      // For production, use FFmpeg.wasm or server-based FFmpeg merging
+    }
+  </script>
+</body>
+</html>

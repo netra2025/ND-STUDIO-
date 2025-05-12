@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Text to Speech - ND Studio</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0f0f0f;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }
+    h1 {
+      color: #00ffcc;
+    }
+    textarea {
+      width: 100%;
+      max-width: 500px;
+      height: 150px;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+      margin-bottom: 1rem;
+      resize: none;
+    }
+    button {
+      background-color: #00ffcc;
+      color: #000;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #00e6b8;
+    }
+  </style>
+</head>
+<body>
+  <h1>🗣️ Text to Speech (AI)</h1>
+  <textarea id="textInput" placeholder="Type or paste your text here..."></textarea>
+  <button onclick="speakText()">🔊 Speak</button>
+
+  <script>
+    function speakText() {
+      const text = document.getElementById('textInput').value;
+      if (!text) {
+        alert('Please enter some text!');
+        return;
+      }
+      const speech = new SpeechSynthesisUtterance(text);
+      speech.lang = 'en-US';
+      speech.volume = 1;
+      speech.rate = 1;
+      speech.pitch = 1;
+      window.speechSynthesis.speak(speech);
+    }
+  </script>
+</body>
+</html>
